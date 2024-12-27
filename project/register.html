@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digi Cash - Register</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Digi Cash Logo" width="120">
+      </div>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="#">Why Digi Cash</a>
+        <a href="#">Our Features</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+  </header>
 
+  <!-- Registration Form -->
+  <div class="container">
+    <div class="register-form">
+      <h1>Create Your Account</h1>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="pin">4-Digit PIN</label>
+          <input type="password" id="pin" name="pin" maxlength="4" required placeholder="Enter a 4-digit PIN">
+        </div>
+
+        <div class="form-group">
+          <label for="security-question">Security Question</label>
+          <select id="security-question" name="security-question" required>
+            <option value="pet">What is your pet's name?</option>
+            <option value="birthplace">Where were you born?</option>
+            <option value="favorite-color">What is your favorite color?</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="answer">Answer to Security Question</label>
+          <input type="text" id="answer" name="answer" required placeholder="Answer to your security question">
+        </div>
+
+        <div class="form-group">
+          <label for="account-number">Last 5 Digits of Your Bank Account</label>
+          <input type="text" id="account-number" name="account-number" maxlength="5" required placeholder="Enter last 5 digits">
+        </div>
+
+        <button type="submit" class="btn-submit">Register</button>
+      </form>
+
+      <p>Already have an account? <a href="login.html">Login Here</a></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
