@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digi Cash - Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Digi Cash Logo" width="120">
+      </div>
+      <div class="navbar-links">
+        <a href="#">Home</a>
+        <a href="#">Why Digi Cash</a>
+        <a href="#">Our Features</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="navbar-buttons">
+        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+        <span class="toggle-theme">Dark View/Night View</span>
+      </div>
+    </nav>
+  </header>
 
+  <!-- Dashboard Content -->
+  <div class="container">
+    <div class="dashboard">
+      <h1>Welcome to Your Dashboard</h1>
+      <p>Account Balance: <strong>$<span id="balance">1000</span></strong></p>
+
+      <div class="feature-buttons">
+        <button class="feature-btn" id="currency-converter">Currency Converter</button>
+        <button class="feature-btn" id="emi-calculator">EMI Calculator</button>
+        <button class="feature-btn" id="withdraw" onclick="showWithdrawForm()">Withdraw</button>
+        <button class="feature-btn" id="deposit" onclick="showDepositForm()">Deposit</button>
+      </div>
+
+      <div id="withdraw-form" style="display: none;">
+        <h3>Withdraw Amount</h3>
+        <input type="number" id="withdraw-amount" placeholder="Enter amount to withdraw">
+        <button onclick="processWithdraw()">Withdraw</button>
+      </div>
+
+      <div id="deposit-form" style="display: none;">
+        <h3>Deposit Amount</h3>
+        <input type="number" id="deposit-amount" placeholder="Enter amount to deposit">
+        <button onclick="processDeposit()">Deposit</button>
+      </div>
+
+      <div id="popup-message" style="display: none; margin-top: 20px;"></div>
+
+      <button class="btn-login" id="logout" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
